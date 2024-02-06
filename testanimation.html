@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .card {
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="card">
+        <!-- Card content goes here -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const card = document.getElementById('card');
+
+            // Trigger the animation after a delay (you can adjust the delay as needed)
+            setTimeout(() => {
+                card.classList.add('show');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
